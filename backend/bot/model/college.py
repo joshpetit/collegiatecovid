@@ -29,8 +29,9 @@ class Duke(College):
         numTests = self.getNumberTests()
 
     def getNumberTests(self):
-        total = self.page.find("p", {"class": "surveillance-total"})
-        num = total.em.text
+        table = self.page.findAll("figure", {"class": "wp-block-table cumulative"})[2]
+        data = table.tbody.tr.td.nextSibling
+        num = data.text
         total = int(num.replace(',',''))
         return total
 

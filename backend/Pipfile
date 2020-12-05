@@ -4,6 +4,8 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+firebase-admin = "*"
+bs4 = "*"
 
 [dev-packages]
 

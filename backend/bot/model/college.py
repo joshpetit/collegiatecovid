@@ -14,14 +14,25 @@ class College:
     def getPage(self, site: str):
         request = requests.get(site)
         soup = BeautifulSoup(request.content, 'html.parser')
+        return soup;
+
+    def getNumberTests(self):
+        pass
 
 class Duke(College):
     def __init__(self):
         College.__init__(self, 'Duke', 'https://coronavirus.duke.edu/covid-testing/', 'Durham, North Carolina')
+        self.page = self.getPage(self.site)
 
     def querySite(self):
-        self.getPage(self.site)
+        self.page = self.getPage(self.site)
+        numTests = self.getNumberTests()
 
+    def getNumberTests(self):
+        total = self.page.find("p", {"class": "surveillance-total"})
+        num = total.em.text
+        total = int(num.replace(',',''))
+        return total
 
 college = Duke()
 college.querySite()

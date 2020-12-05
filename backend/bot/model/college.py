@@ -13,9 +13,17 @@ class College:
 
 
 class Duke(College):
-    def __init__(self, name, site, location):
-        Person.__init__(self, name, site, location)
+    def __init__(self):
+        College.__init__(self, 'Duke', 'https://coronavirus.duke.edu/covid-testing/', 'Durham, North Carolina')
 
     def querySite(self):
-        pass
+        getPage(self.site)
 
+def getPage(site: str):
+    request = requests.get(site)
+    soup = BeautifulSoup(request.content, 'html.parser')
+
+
+
+college = Duke()
+college.querySite()

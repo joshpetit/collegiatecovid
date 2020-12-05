@@ -11,18 +11,16 @@ class College:
     def querySite(self):
         pass
 
+    def getPage(self, site: str):
+        request = requests.get(site)
+        soup = BeautifulSoup(request.content, 'html.parser')
 
 class Duke(College):
     def __init__(self):
         College.__init__(self, 'Duke', 'https://coronavirus.duke.edu/covid-testing/', 'Durham, North Carolina')
 
     def querySite(self):
-        getPage(self.site)
-
-def getPage(site: str):
-    request = requests.get(site)
-    soup = BeautifulSoup(request.content, 'html.parser')
-
+        self.getPage(self.site)
 
 
 college = Duke()

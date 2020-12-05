@@ -26,22 +26,29 @@ class Duke(College):
     def __init__(self):
         College.__init__(self, 'Duke', 'https://coronavirus.duke.edu/covid-testing/', 'Durham, North Carolina')
         self.page = self.getPage(self.site)
-        self.totalTable = self.page.findAll("figure", {"class": "wp-block-table cumulative"})[2]
+        self.totalTable = self.page .findAll("figure",
+                                     {"class": "wp-block-table cumulative"})[2].tbody
 
     def querySite(self):
+        res = {}
         self.page = self.getPage(self.site)
         numTests = self.getNumberTests()
+        res['total_tests'] = numTests
         posCases = self.getPosCases()
+        res['total_pos_cases'] = posCases
+        print(res)
 
     def getNumberTests(self):
-        table = self.totalTable
-        data = table.tbody.tr.td.nextSibling
+        data = self.totalTable.tr.td.nextSibling
         num = data.text
         total = int(num.replace(',',''))
         return total
 
     def getPosCases(self):
-        pass
+        data = self.totalTable.tr.td.nextSibling.nextSibling
+        num = data.text
+        total = int(num.replace(',',''))
+        return total
 
 
 college = Duke()

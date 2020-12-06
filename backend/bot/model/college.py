@@ -7,10 +7,9 @@ from bs4 import BeautifulSoup
 tracemalloc.start()
 class College:
 
-    def __init__(self, name: str, site: str, location: str):
+    def __init__(self, name: str, site: str):
         self.name = name;
         self.site = site;
-        self.location = location;
         self.page = self.get_page(self.site)
 
     def query_site(self):

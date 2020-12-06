@@ -10,8 +10,7 @@ tracemalloc.start()
 class CMU(College):
     def __init__(self):
         College.__init__(self, 'Carnegie Mellon University',
-                         'https://www.cmu.edu/coronavirus/health-and-wellness/dashboard.html#cumulative-data'
-                         , 'Pittsburgh, Pennsylvania')
+                         'https://www.cmu.edu/coronavirus/health-and-wellness/dashboard.html#cumulative-data')
     def query_site(self):
         return {
             'pos_cases': self.pos_cases,

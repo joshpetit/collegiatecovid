@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 class UF(College):
     def __init__(self):
         College.__init__(self, 'University of Florida',
-                         'https://coronavirus.ufhealth.org/screen-test-protect-2/about-initiative/testing-dashboard/' ,'Gainesville, Florida')
+                         'https://coronavirus.ufhealth.org/screen-test-protect-2/about-initiative/testing-dashboard/')
 
 
     def query_site(self):

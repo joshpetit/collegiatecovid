@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 class Harvard(College):
     def __init__(self):
         College.__init__(self, 'Harvard',
-                         'https://www.harvard.edu/coronavirus/harvard-university-wide-covid-19-testing-dashboard' ,'Cambridge, Massachussetts')
+                         'https://www.harvard.edu/coronavirus/harvard-university-wide-covid-19-testing-dashboard')
         self.list = self.page.select('div.card__text h1')
 
 

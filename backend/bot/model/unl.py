@@ -10,8 +10,7 @@ tracemalloc.start()
 class UNL(College):
     def __init__(self):
         College.__init__(self, 'University of Nebraska Lincoln',
-                         'https://covid19.unl.edu/unl-covid-19-dashboard',
-                         'Lincoln, Nebraska')
+                         'https://covid19.unl.edu/unl-covid-19-dashboard')
 
     async def go(self):
         browser = await launch()

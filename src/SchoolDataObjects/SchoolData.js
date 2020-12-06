@@ -10,10 +10,10 @@ export default class SchoolData {
             //TODO:change this to be dynamic for each school?
         const imgUrl = "./duke.png"
         const stats = getCollegeStats(state.name);
-
         let schoolPolicy = getCollegePolicies(state.name);
         console.log(schoolPolicy)
         console.log(Object.keys(schoolPolicy))
+
 
         //initialization of data
         this.name = state.name;

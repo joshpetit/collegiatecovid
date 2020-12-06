@@ -1,4 +1,3 @@
-import './App.css';
 import React from "react";
 import NavBar from "./HomePageComponents/NavBar";
 

@@ -37,6 +37,6 @@ class Skidmore(College):
         num_tests = data[6].text
         return int(num_tests.replace(',',''))
 
-college = Skidmore()
-print(college.query_site())
+#college = Skidmore()
+#print(college.query_site())
 

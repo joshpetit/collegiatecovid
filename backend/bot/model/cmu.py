@@ -47,7 +47,8 @@ class CMU(College):
     def get_number_tests(self):
         pass
 
-# college = CMU()
-# res = college.query_site()
+#college = CMU()
+#res = college.query_site()
+#print(res['isolation'])
 # print(res)
 

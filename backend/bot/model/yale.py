@@ -23,6 +23,6 @@ class Yale(College):
         pos_rate = table[19].text
         return float(pos_rate[0:-1])
 
-college = Yale()
-print(college.query_site())
+#college = Yale()
+#print(college.query_site())
 

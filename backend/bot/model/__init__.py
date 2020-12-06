@@ -6,3 +6,4 @@ from .unl import UNL
 from .duke import Duke
 from .yale import Yale
 from .skidmore import Skidmore
+from .gvsu import GVSU

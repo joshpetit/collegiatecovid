@@ -18,12 +18,14 @@ class GVSU(College):
         return res
 
     def get_pos_cases(self):
-        pass
+        tab = self.page.find('table', id='list_075C4C8D-A3EB-1735-D5AC3CC091608E84')
+        data = tab.findAll('td')[8]
+        return int(data.text.replace(',',''))
 
     def get_number_tests(self):
         tab = self.page.find('table', id='list_075C4C8D-A3EB-1735-D5AC3CC091608E84')
-        data = tab.findAll('td')
-        print(data)
+        data = tab.findAll('td')[7]
+        return int(data.text.replace(',',''))
 
     def getPosRate(self):
         tab = self.page.find('table', id='list_075C4C8D-A3EB-1735-D5AC3CC091608E84')
@@ -33,6 +35,6 @@ class GVSU(College):
     def get_iso(self):
         pass
 
-college = GVSU()
-print(college.query_site())
+#college = GVSU()
+#print(college.query_site())
 

@@ -23,7 +23,7 @@ export default function App() {
         }
         <Switch>
             <Route path="/school">
-                <SchoolPage school-name = />
+                <SchoolPage name = "Duke University" />
             </Route>
             <Route path="/">
                 <LandingPage />

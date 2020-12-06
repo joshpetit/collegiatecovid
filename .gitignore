@@ -245,3 +245,4 @@ cython_debug/
 
 backend/*.json
 package-lock.json
+*secret*

@@ -33,6 +33,11 @@ export function getCollegePolicies(name) {
     data['classes'] = obj['classes']
     data['frequency'] = obj['frequency']
     data['people'] = obj['people']
+  return {
+    'checkin' : data['checkin'],
+    'classes': data['classes'],
+    'frequency': data['frequency'],
+    'people': data['people']
+  }
   })
-  return data
 }

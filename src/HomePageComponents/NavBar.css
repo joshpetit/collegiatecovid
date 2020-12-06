@@ -17,9 +17,11 @@ nav{
 
 .Navs h2{
     color: white;
-    font-size:25px
+    font-size:27px;
+    margin-left: 10px
 
 }
+
 
 #logo{
     text-align: Left;

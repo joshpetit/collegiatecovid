@@ -27,13 +27,15 @@ class NavBar extends React.Component {
                 <div>
                     <nav>
                         <div className="Navs">
-
-                            <Link to="/" style={{textDecoration: 'none'}}><h2>Collegiate Covid</h2></Link>
-
-                            <SearchBarz callBack={this.callBack}/>
-                            {this.state.changed &&
-                            <Redirect to="/school"/>}
-                            {/*TODO: make run multiple times*/}
+                            <div style={{marginLeft: 10, marginRight: 200}}>
+                                <Link to="/" style={{textDecoration: 'none'}}><h2>Collegiate Covid</h2></Link>
+                            </div>
+                            <div style={{marginTop: 10}}>
+                                <SearchBarz callBack={this.callBack}/>
+                                {this.state.changed &&
+                                <Redirect to="/school"/>}
+                                {/*TODO: make run multiple times*/}
+                            </div>
 
 
                         </div>

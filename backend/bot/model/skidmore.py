@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 
 class Skidmore(College):
     def __init__(self):
-        College.__init__(self, 'Skidmore University',
+        College.__init__(self, 'Skidmore College',
                          'https://www.skidmore.edu/campus-planning/dashboard.php')
 
 

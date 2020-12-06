@@ -1,32 +1,69 @@
 
-.school-page-header {
-    background-color: #282c34;
-    min-height: 100vh;
+
+:root {
+    --light-blue: #92A6F8;
+    --dark-blue: #092DBD;
+    --off-white: #E0EEFE;
+}
+
+h1 {
+    background-color: var(--light-blue);
+    position: sticky;
+    top: 0;
+    padding-bottom: 20px;
+    padding-top: 20px;
+
+    background-clip: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: calc(10px + 2vmin);
+    font-size: calc(15px + 2vmin);
     color: white;
 }
 
-.App-link {
-    color: #61dafb;
+h2 {
+    text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+
+ul {
+    width: 40%;
+    margin: auto;
+    text-align: left;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+ul li {
+    background-color: white;margin: 10px;
+    border-radius: 0 0.5rem 0.5rem 0.5rem;
+    box-shadow: 0.25rem 0.25rem 0.6rem rgba(0,0,0,0.05), 0 0.5rem 1.125rem rgba(75,0,0,0.05);
+    padding: 3px;
+    list-style-position: inside;
+}
+
+#statistic-elements {
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+
+#statistic {
+    background-color: var(--off-white);
+    background-clip: border-box;
+    max-width: 300px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 1px black;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 10px;
+}
+
+#statistic p {
+    text-align: center;
+}
+
+#policy-section {
 }
 
 
@@ -35,12 +72,6 @@ not sure exactly how css works in react, but some notes that may
 prove useful.
 general: recall html elements can have multiple css classes
 
-
-
-:root {
-    --variable: definition;
-    --dark: colorhexcode;
-}
 
 
 

@@ -1,24 +1,20 @@
 import React from "react";
-import logo from "../logo.svg";
-import "./SchoolPage.css"
+import SchoolData from "../SchoolDataObjects/SchoolData";
 
-function SchoolPage() {
+import "./SchoolPage.css";
+import Header from "./Header";
+import PolicySection from "./PolicySection";
+import StatisticSection from "./StatisticSection";
+
+
+function SchoolPage(props) {
+    let data = new SchoolData(props.name);
+
     return (
         <div id="school-page">
-            <header className="school-page-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>
-                    Alan Wandke
-                </p>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-                </a>
-            </header>
+            <Header school={data}/>
+            <PolicySection school={data}/>
+            <StatisticSection school={data}/>
         </div>
     )
 }

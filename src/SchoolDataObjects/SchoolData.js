@@ -3,22 +3,36 @@
 
 import SchoolPolicies from "../data/schoolPolicies"
 
-export default class SchoolPolicyData {
+export default class SchoolData {
     constructor(name) {
         //need a way or a place to get data from
         /**
         const schoolPolicies = new SchoolPolicies();
         const schoolDataObj = JSON.parse(schoolPolicies.schoolPolicies)
-        const schoolData = this.getNamedUniversity(schoolDataObj,name)
+        const  = this.getNamedUniversity(schoolDataObj,name)
          */
-        const schoolData = {name:"Duke University", frequency:"1 per week", people: "everyone tested",
+
+        //mock data
+        const schoolPolicy = {name:"Duke University", frequency:"1 per week", people: "everyone tested",
         classes:"blended", checkin:"everyday"}
 
-        this.name = schoolData.name;
-        this.frequency = schoolData.frequency;
-        this.people = schoolData.people;
-        this.classes = schoolData.classes;
-        this.checkin = schoolData.checkin;
+        const data =
+            {name: "Duke University",
+            cases: 12000000,
+            tests: 23,
+            positivity: 6.23,
+            isolation: 28
+        }
+
+        this.name = schoolPolicy.name;
+        this.frequency = schoolPolicy.frequency;
+        this.people = schoolPolicy.people;
+        this.classes = schoolPolicy.classes;
+        this.checkin = schoolPolicy.checkin;
+        this.cases = data.cases;
+        this.tests = data.tests;
+        this.positivity = data.positivity;
+        this.isolation = data.isolation;
     }
 
     /**

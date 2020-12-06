@@ -48,6 +48,6 @@ class Amherst(College):
         iso = int(tot.replace(',',''))
         return iso
 
-college = Amherst()
-print(college.query_site())
+#college = Amherst()
+#print(college.query_site())
 

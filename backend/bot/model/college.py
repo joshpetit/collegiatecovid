@@ -27,6 +27,9 @@ class College:
     def get_pos_cases(self):
         pass
 
+    def get_iso(self):
+        pass
+
 class Duke(College):
     def __init__(self):
         College.__init__(self, 'Duke', 'https://coronavirus.duke.edu/covid-testing/', 'Durham, North Carolina')
@@ -38,9 +41,11 @@ class Duke(College):
         res = {}
         self.page = self.get_page(self.site)
         numTests = self.get_number_tests()
-        res['total_tests'] = numTests
         posCases = self.get_pos_cases()
-        res['total_pos_cases'] = posCases
+        iso = self.get_iso()
+        res['total_tests'] = numTests
+        res['pos_cases'] = posCases
+        res['isolation'] = iso
         return res
 
     def get_number_tests(self):
@@ -54,6 +59,14 @@ class Duke(College):
         num = data.text
         total = int(num.replace(',',''))
         return total
+
+    def get_iso(self):
+        table = self.page.findAll("figure",{"class": "wp-block-table stats-breakdown"})[-1]
+        data = table.tbody.tr.findAll("td")
+        num_data = data[3].text
+        iso = int(num_data.replace(',',''))
+        return iso
+
 
 class UIUC(College):
     def __init__(self):
@@ -104,7 +117,6 @@ class Harvard(College):
         res['pos_cases'] = posCases
         res['pos_rate'] = posRate
         res['isolation'] = iso
-        print(res)
 
     def get_pos_cases(self):
         num = self.list[9].text
@@ -125,10 +137,40 @@ class Harvard(College):
         iso = int(num[0:-1])
         return iso
 
-college = Duke()
-res = college.query_site()
-print(res)
+class CMU(College):
+    def __init__(self):
+        College.__init__(self, 'Carnegie Mellon University',
+                         'https://www.cmu.edu/coronavirus/health-and-wellness/dashboard.html#cumulative-data'
+                         , 'Pittsburgh, Pennsylvania')
+    def query_site(self):
+        return {
+            'pos_cases': self.pos_cases
+        }
 
-college = Harvard()
+    async def go(self):
+        browser = await launch()
+        page = await browser.newPage()
+        await page.goto(self.site, waitUntil='networkidle0')
+        self.page = page
+        element = await page.querySelector('.total-on-campus')
+        toc = await page.evaluate('(e) => e.textContent', element)
+        cases_campus = int(toc)
+
+        element = await page.querySelector('.total-off-campus')
+        noc = await page.evaluate('(e) => e.textContent', element)
+        off_campus = int(noc)
+        total = cases_campus + off_campus
+        self.pos_cases = total
+
+        await browser.close()
+
+
+    def get_page(self, site: str):
+        asyncio.get_event_loop().run_until_complete(self.go())
+
+    def get_number_tests(self):
+        pass
+
+college = CMU()
 res = college.query_site()
 print(res)

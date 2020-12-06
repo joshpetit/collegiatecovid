@@ -22,7 +22,7 @@ class OSU(College):
         await page.goto(self.site, waitUntil='networkidle2')
         self.page = page
         # await page.screenshot({'path': 'example.png'})
-        element = await page.querySelector('#bp-page-12')
+        element = await page.querySelectorAll('button')[1]
         content = await page.evaluate("(e) => e", element)
         print(content)
         await browser.close()

@@ -15,12 +15,13 @@ class CMU(College):
     def query_site(self):
         return {
             'pos_cases': self.pos_cases
+            'pos_rate': self.pos_rate
         }
 
     async def go(self):
         browser = await launch()
         page = await browser.newPage()
-        await page.goto(self.site, waituntil='networkidle2')
+        await page.goto(self.site)
         self.page = page
         element = await page.querySelector('.total-on-campus')
         toc = await page.evaluate('(e) => e.textContent', element)
@@ -32,6 +33,12 @@ class CMU(College):
         total = cases_campus + off_campus
         self.pos_cases = total
 
+        element = await page.querySelector('#testing')
+        noc = await page.evaluate(
+            '(e) => e.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.firstElementChild.textContent',
+            element)
+        pos_rate = float(noc[0:-1])
+        self.pos_rate = pos_rate
         await browser.close()
 
 

@@ -13,8 +13,8 @@ function SchoolPage(props) {
     return (
         <div id="school-page">
             <Header name={props.name}/>
-            <PolicySection name={props.name}/>
-            <StatisticSection school={data} />
+            <PolicySection school={data}/>
+            <StatisticSection school={data}/>
         </div>
     )
 }

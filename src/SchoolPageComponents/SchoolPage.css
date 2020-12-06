@@ -33,6 +33,11 @@ ul {
     text-align: left;
 }
 
+ul li {
+    background-color: white;
+    border-radius: 0 0.5rem 0.5rem 0.5rem;
+}
+
 #statistic-elements {
     align-content: center;
     justify-content: center;

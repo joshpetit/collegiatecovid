@@ -7,7 +7,7 @@ import HomePage from "../HomePage";
 class NavBar extends React.Component{
     constructor() {
         super()
-        this.state = {total:0}
+        this.state = {}
         this.callBack=this.callBack.bind(this);
 
 

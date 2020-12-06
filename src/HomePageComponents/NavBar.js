@@ -7,6 +7,7 @@ import HomePage from "../HomePage";
 class NavBar extends React.Component{
     constructor() {
         super()
+        this.state = {}
         this.callBack=this.callBack.bind(this);
 
     }
@@ -26,7 +27,6 @@ class NavBar extends React.Component{
                     <ul>
                         <li>
                             <Link to="/">Collegiate Covid</Link>
-
                         </li>
 
                             <SearchBarz callBack={this.callBack}/>

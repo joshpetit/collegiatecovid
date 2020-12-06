@@ -1,10 +1,11 @@
 import React from "react";
+import "./SchoolPage.css"
 
 function Statistic(props) {
     return (
         <div id = "statistic">
-            <h3>{props.statistic.name}</h3>
-            <h3>{props.statistic.stat}</h3>
+            <p>{props.statistic.name}</p>
+            <p>{props.statistic.stat}</p>
         </div>
     )
 }

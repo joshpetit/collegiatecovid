@@ -24,6 +24,7 @@ export default class SchoolData {
             isolation: 28
         }
 
+        //initialization of data
         this.name = schoolPolicy.name;
         this.frequency = schoolPolicy.frequency;
         this.people = schoolPolicy.people;

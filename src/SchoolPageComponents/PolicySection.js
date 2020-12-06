@@ -1,15 +1,16 @@
 import React from "react"
+import "./SchoolPage.css"
 
 function PolicySection(props) {
 
     return (
-        <div>
-            <h2>covid mitigation policies</h2>
+        <div id = "policy-section">
+            <h2>Coronavirus Mitigation Policies</h2>
             <ul>
-                <li>{"hello Mandatory Testing: "+ props.school.frequency}</li>
+                <li>{"Mandatory Testing: "+ props.school.frequency}</li>
                 <li>{"People being tested: " + props.school.people}</li>
                 <li>{"Type of classes: " + props.school.classes}</li>
-                <li>{"Requires Symptom Check-in: " + props.school.classes}</li>
+                <li>{"Requires Symptom Check-in: " + props.school.checkin}</li>
             </ul>
         </div>
     )

@@ -243,4 +243,5 @@ cython_debug/
 
 .DS_Store
 
-
+backend/*.json
+package-lock.json

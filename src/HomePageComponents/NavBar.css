@@ -5,6 +5,8 @@ nav{
     margin: 0;
     text-align: center;
     list-style-type: none;
+    background-clip: border-box;
+    position: relative;
 }
 
 .Navs{
@@ -15,7 +17,7 @@ nav{
 
 .Navs h2{
     color: white;
-    font-size:30px
+    font-size:25px
 
 }
 

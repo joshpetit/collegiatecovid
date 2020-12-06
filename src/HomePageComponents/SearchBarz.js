@@ -1,6 +1,6 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
-import Autocomplete from '@material-ui/lab/AutoComplete';
+import Autocomplete from '@material-ui/lab/Autocomplete';
 import schools from "./schools"
 import {Link} from "react-router-dom";
 

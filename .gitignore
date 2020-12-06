@@ -242,3 +242,10 @@ dmypy.json
 cython_debug/
 
 backend/*.json
+.DS_Store
+
+backend/*.json
+package-lock.json
+src/data/secret.js
+secret.js
+.eslintcache

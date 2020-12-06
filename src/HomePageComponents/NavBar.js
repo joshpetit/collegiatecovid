@@ -7,7 +7,6 @@ import HomePage from "../HomePage";
 class NavBar extends React.Component{
     constructor() {
         super()
-        this.state = {total:0}
         this.callBack=this.callBack.bind(this);
 
     }
@@ -15,7 +14,6 @@ class NavBar extends React.Component{
     callBack = (props) => {
         this.setState({name: props})
         this.state.changed=true
-        this.state.total++
         console.log(props, this.state.changed)
     }
 
@@ -41,7 +39,6 @@ class NavBar extends React.Component{
                     <Route path="/school">
                         <SchoolPage name = {this.state}/>
                         {this.state.changed=false}
-                        {console.log(this.state.changed, this.state.total)}
                     </Route>
                     <Route path="/about">
                         <AboutPage />

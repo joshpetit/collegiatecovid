@@ -7,6 +7,7 @@ class College:
         self.name = name;
         self.site = site;
         self.location = location;
+        self.page = self.getPage(self.site)
 
     def querySite(self):
         pass
@@ -25,7 +26,6 @@ class College:
 class Duke(College):
     def __init__(self):
         College.__init__(self, 'Duke', 'https://coronavirus.duke.edu/covid-testing/', 'Durham, North Carolina')
-        self.page = self.getPage(self.site)
         self.totalTable = self.page .findAll("figure",
                                      {"class": "wp-block-table cumulative"})[2].tbody
 
@@ -36,7 +36,6 @@ class Duke(College):
         res['total_tests'] = numTests
         posCases = self.getPosCases()
         res['total_pos_cases'] = posCases
-        print(res)
 
     def getNumberTests(self):
         data = self.totalTable.tr.td.nextSibling
@@ -50,6 +49,17 @@ class Duke(College):
         total = int(num.replace(',',''))
         return total
 
+class UIUC(College):
+    def __init__(self):
+        College.__init__(self, 'University of Illinois at Urbana Champaign',
+                         'https://splunk-public.machinedata.illinois.edu/en-US/app/uofi_shield_public_APP/home',
+                         'Urbana-Champaign, Illinois')
 
-college = Duke()
+    def querySite(self):
+        print(self.page)
+
+    def getNumberTests(self):
+        pass
+
+college = UIUC()
 college.querySite()

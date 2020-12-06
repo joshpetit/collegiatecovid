@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "e1b06953183fea2a267019114261e5166b540ec418949b1233e06646607bbca1"
+            "sha256": "ca1d26a348a332ca0d0d30103dc1419bbc57d4d1d81ec485ddfff07b22cca48d"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -259,6 +259,13 @@
             ],
             "version": "==1.34.0"
         },
+        "html.parser": {
+            "hashes": [
+                "sha256:8c61bde2c4e558daf790cd95daf7aa06d2a07699caaa6ec3f34b76966e2332f8"
+            ],
+            "index": "pypi",
+            "version": "==0.2"
+        },
         "httplib2": {
             "hashes": [
                 "sha256:8af66c1c52c7ffe1aa5dc4bcd7c769885254b0756e6e69f953c7f0ab49a70ba3",
@@ -296,6 +303,13 @@
                 "sha256:ea41c9219c597f1d2bf6b374d951d310d58684b5de9dc4bd2976db9e1e22c140"
             ],
             "version": "==1.0.0"
+        },
+        "ply": {
+            "hashes": [
+                "sha256:00c7c1aaa88358b9c765b6d3000c6eec0ba42abca5351b095321aef446081da3",
+                "sha256:096f9b8350b65ebd2fd1346b12452efe5b9607f7482813ffca50c22722a807ce"
+            ],
+            "version": "==3.11"
         },
         "proto-plus": {
             "hashes": [

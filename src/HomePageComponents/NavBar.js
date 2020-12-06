@@ -28,7 +28,6 @@ class NavBar extends React.Component{
                     <ul>
                         <li>
                             <Link to="/">Collegiate Covid</Link>
-
                         </li>
 
                             <SearchBarz callBack={this.callBack}/>

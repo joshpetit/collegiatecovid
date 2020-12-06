@@ -17,3 +17,13 @@ for school in schools:
         'pos_rate': query.get('pos_rate', None)
     })
 
+#for college in schools:
+#    doc_ref = db.collection('college_policies').document(college['name'])
+#    print(college)
+#    doc_ref.set({
+#        'frequency': college['frequency'],
+#        'people': college['people'],
+#        'classes': college['classes'],
+#        'checkin': college['checkin'],
+#    })
+

@@ -1,26 +1,52 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/AutoComplete';
+import schools from "./schools"
+import {Link} from "react-router-dom";
 
-export default function SearchBarz() {
-    return (
-        <Autocomplete
-            id="combo-box-demo"
-            options={schools}
-            getOptionLabel={(option) => option.name}
-            style={{ width: 300 }}
-            renderInput={(params) => <TextField {...params} label="Search for your School" variant="outlined" />}
-        />
-    );
+export default function SearchBarz(prop) {
+
+//     return (
+//         <Autocomplete
+//             id="combo-box-demo"
+//             options={schools}
+//             getOptionLabel={(option) => option.name}
+//             style={{width: 300}}
+//             renderInput={(params) => <TextField {...params} label="Search for your School" variant="outlined"/>}
+//
+//         />
+//     );
+// }
+
+    const [value, setValue] = React.useState('');
+    const [inputValue, setInputValue] = React.useState('');
+
+
+
+    return(
+        <div>
+            <Autocomplete
+                value={value}
+                onChange={(event, newValue) => {
+                    if(newValue!==null) {
+                        setValue(newValue.name)
+                        prop.callBack(newValue.name)
+                    }
+                }}
+
+
+
+                inputValue={inputValue}
+                onInputChange={(event, newInputValue) => {
+                    setInputValue(newInputValue);
+                }}
+                id="controllable-search"
+                options={schools}
+                getOptionLabel={(option) => option.name}
+                style={{ width: 300 }}
+                renderInput={(params) => <TextField {...params} label="Search for your School" variant="outlined" />}
+            />
+        </div>
+    )
+
 }
-
-// Top 100 films as rated by IMDb users. http://www.imdb.com/chart/top
-const schools = [
-    { name: 'Duke'},
-    { name: 'UIUC'},
-    { name: 'Stanford'},
-    { name: 'Harvard'},
-    { name: 'Amherst'},
-    { name: 'BeiDa'},
-    { name: 'Dukie'},
-];

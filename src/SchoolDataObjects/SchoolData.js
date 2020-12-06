@@ -20,8 +20,8 @@ export default class SchoolData {
 
         const data =
             {name: "Duke University",
-            cases: 12000000,
-            tests: 23,
+            cases: 241,
+            tests: 178084,
             positivity: 6.23,
             isolation: 28
         }

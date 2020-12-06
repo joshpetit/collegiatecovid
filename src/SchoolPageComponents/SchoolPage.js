@@ -1,10 +1,13 @@
 import React from "react";
 import logo from "../logo.svg";
 import "./SchoolPage.css"
+import Header from "./Header";
 
-function SchoolPage() {
+function SchoolPage(props) {
     return (
         <div id="school-page">
+            <Header name={props.name}/>
+            <PolicySection name = {props.name}/>
             <header className="school-page-header">
                 <img src={logo} className="App-logo" alt="logo" />
                 <p>

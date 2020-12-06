@@ -1,0 +1,1 @@
+//this is a object that represents a school

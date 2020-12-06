@@ -1,9 +1,8 @@
 import React from "react"
 
-function Header() {
-
+function Header(props) {
     return (
-        <h1> Website Title</h1>
+        <h1> Data about {props.name}</h1>
     )
 }
 

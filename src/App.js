@@ -23,7 +23,7 @@ export default function App() {
         }
         <Switch>
             <Route path="/school">
-                <SchoolPage />
+                <SchoolPage school-name = />
             </Route>
             <Route path="/">
                 <LandingPage />

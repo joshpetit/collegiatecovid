@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Link, Route, Switch, Redirect} from "react-rout
 import SearchBarz from "./SearchBarz";
 import SchoolPage from "../SchoolPageComponents/SchoolPage";
 import HomePage from "../HomePage";
+import "./NavBar.css";
 
 class NavBar extends React.Component{
     constructor() {
@@ -23,18 +24,20 @@ class NavBar extends React.Component{
     render(){
         return(
         <Router>
-            <div className="App">
+            <div>
                 <nav>
-                    <ul>
-                        <li>
-                            <Link to="/">Collegiate Covid</Link>
+                    <div className="Navs">
 
-                        </li>
+                            <Link to="/" style={{ textDecoration: 'none' }}><h2>Collegiate Covid</h2></Link>
+
+
 
                             <SearchBarz callBack={this.callBack}/>
                             {this.state.changed&&
                             <Redirect to="/school"/>} //TODO: make run multiple times
-                    </ul>
+
+
+                    </div>
                 </nav>
 
                 <Switch>

@@ -35,6 +35,5 @@ class UF(College):
         iso = int(iso.replace(',',''))
         return iso
 
-college = UF()
-res = college.query_site()
-print(res)
+# college = UF()
+# print(college.query_site())

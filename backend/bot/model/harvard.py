@@ -40,7 +40,6 @@ class Harvard(College):
         iso = int(num[0:-1])
         return iso
 
-college = Harvard()
-res = college.query_site()
-print(res)
+# college = Harvard()
+# print(college.query_site())
 

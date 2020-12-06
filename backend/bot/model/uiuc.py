@@ -42,7 +42,6 @@ class UIUC(College):
         pass
 
 
-college = UIUC()
-res = college.query_site()
-print(res)
+# college = UIUC()
+# print(college.query_site())
 

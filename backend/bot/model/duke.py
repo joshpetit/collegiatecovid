@@ -39,5 +39,5 @@ class Duke(College):
         iso = int(num_data.replace(',',''))
         return iso
 
-college = Duke()
-print(college.query_site())
+# college = Duke()
+# print(college.query_site())

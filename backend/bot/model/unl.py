@@ -47,5 +47,5 @@ class UNL(College):
     def get_number_tests(self):
         pass
 
-college = UNL()
-print(college.query_site())
+# college = UNL()
+# print(college.query_site())

@@ -1,25 +1,45 @@
-import logo from './logo.svg';
 import './App.css';
+import React from "react";
+import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 
-function App() {
+import SchoolPage from "./SchoolPageComponents/SchoolPage"
+
+export default function App() {
   return (
+      <Router>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <nav>
+            <ul>
+                <li>
+                    <Link to="/">Landing Page</Link>
+                </li>
+                <li>
+                    <Link to="/school">School</Link>
+                </li>
+            </ul>
+        </nav>
+
+        {//this is what defines what each route does
+        }
+        <Switch>
+            <Route path="/school">
+                <SchoolPage name = "Duke University" />
+            </Route>
+            <Route path="/">
+                <LandingPage />
+            </Route>
+        </Switch>
     </div>
+      </Router>
   );
 }
 
-export default App;
+/**
+ * This landing page component is called whenever a link to this page is clicked
+ You delete this function and use whatever component you have
+ that encompasses landing page
+ */
+function LandingPage() {
+    return <h2>Welcome to College Coronavirus Tracker!</h2>;
+}
+

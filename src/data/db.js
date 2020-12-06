@@ -14,4 +14,30 @@ export function getCollegesNames() {
   return names;
 }
 
-console.log(getCollegesNames())
+export function getCollegeStats(name) {
+  let ref = firebase.firestore().collection('colleges_stats').doc(name).get()
+  let data = {}
+  ref.then( (x) => {
+    let obj = x.data()
+    data['isolation'] = obj['isolation']
+    data['pos_cases'] = obj['pos_cases']
+    data['pos_rate'] = obj['pos_rate']
+    data['total_tests'] = obj['total_tests']
+  })
+  return data
+}
+
+export function getCollegePolicies(name) {
+  let ref = firebase.firestore().collection('college_policies').doc(name).get()
+  let data = {}
+  ref.then( (x) => {
+    let obj = x.data()
+    data['checkin'] = obj['checkin']
+    data['classes'] = obj['classes']
+    data['frequency'] = obj['frequency']
+    data['people'] = obj['people']
+  })
+  return data
+}
+
+console.log(getCollegePolicies("Duke University"))

@@ -4,3 +4,5 @@ from .uf import UF
 from .uiuc import UIUC
 from .unl import UNL
 from .duke import Duke
+from .yale import Yale
+from .skidmore import Skidmore

@@ -241,4 +241,7 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
+backend/*.json
+
 .DS_Store
+

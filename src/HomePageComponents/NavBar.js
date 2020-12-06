@@ -10,6 +10,7 @@ class NavBar extends React.Component{
         this.state = {}
         this.callBack=this.callBack.bind(this);
 
+
     }
 
     callBack = (props) => {

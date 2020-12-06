@@ -13,6 +13,8 @@ export default class SchoolData {
          */
 
         //mock data
+        const imgUrl = "./duke.png"
+
         const schoolPolicy = {name:"Duke University", frequency:"1 per week", people: "everyone tested",
         classes:"blended", checkin:"everyday"}
 
@@ -34,6 +36,7 @@ export default class SchoolData {
         this.tests = data.tests;
         this.positivity = data.positivity;
         this.isolation = data.isolation;
+        this.imgUrl = imgUrl;
     }
 
     /**

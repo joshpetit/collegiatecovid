@@ -12,7 +12,7 @@ function SchoolPage(props) {
 
     return (
         <div id="school-page">
-            <Header name={props.name}/>
+            <Header school={data}/>
             <PolicySection school={data}/>
             <StatisticSection school={data}/>
         </div>

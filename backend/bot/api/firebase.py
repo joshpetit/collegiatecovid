@@ -5,7 +5,7 @@ cred = credentials.Certificate('./collegiatecovid.json')
 app = initialize_app(cred)
 db = firestore.client()
 
-schools = [Harvard(), CMU(), UF(), UIUC(), UNL(), Duke(), Yale(), Skidmore(), GVSU()]
+schools = [Harvard(), CMU(), UF(), UIUC(), UNL(), Duke(), Yale(), Skidmore(), GVSU(), Amherst()]
 
 for school in schools:
     doc_ref = db.collection('colleges_stats').document(school.name)

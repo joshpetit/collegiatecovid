@@ -8,7 +8,7 @@ import {getCollegePolicies} from "../data/db";
 export default class SchoolData {
     constructor(state) {
             //TODO:change this to be dynamic for each school?
-        const imgUrl = "./duke.jp"
+        const imgUrl = "./duke.png"
 
         console.log(state.name);
         const stats = getCollegeStats(state.name);

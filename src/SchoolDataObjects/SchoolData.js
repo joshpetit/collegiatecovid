@@ -11,9 +11,9 @@ export default class SchoolData {
         const imgUrl = "./duke.png"
         const stats = getCollegeStats(state.name);
 
-        const schoolPolicy = getCollegePolicies(state.name);
+        let schoolPolicy = getCollegePolicies(state.name);
         console.log(schoolPolicy)
-        console.log(schoolPolicy[0])
+        console.log(Object.keys(schoolPolicy))
 
         //initialization of data
         this.name = state.name;

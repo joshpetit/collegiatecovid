@@ -2,7 +2,6 @@ import React from "react";
 import Statistic from "./Statistic";
 
 function StatisticSection(props) {
-    console.log(props)
     return (
         <div id = "statistic-section">
             <h2>{props.school.name + " by the numbers"}</h2>

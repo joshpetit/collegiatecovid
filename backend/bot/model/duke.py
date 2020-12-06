@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 
 class Duke(College):
     def __init__(self):
-        College.__init__(self, 'Duke', 'https://coronavirus.duke.edu/covid-testing/', 'Durham, North Carolina')
+        College.__init__(self, 'Duke University', 'https://coronavirus.duke.edu/covid-testing/')
         self.totalTable = self.page.findAll("figure",
                                      {"class": "wp-block-table cumulative"})[2].tbody
 

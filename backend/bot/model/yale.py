@@ -5,7 +5,7 @@ from .college import College
 
 class Yale(College):
     def __init__(self):
-        College.__init__(self, 'Yale', 'https://covid19.yale.edu/yale-statistics/yale-covid-19-statistics-data-tables#yale-positive-cases-data')
+        College.__init__(self, 'Yale University', 'https://covid19.yale.edu/yale-statistics/yale-covid-19-statistics-data-tables#yale-positive-cases-data')
 
     def query_site(self):
         res = {}

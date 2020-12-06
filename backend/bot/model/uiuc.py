@@ -10,7 +10,7 @@ tracemalloc.start()
 
 class UIUC(College):
     def __init__(self):
-        College.__init__(self, 'University of Illinois at Urbana Champaign',
+        College.__init__(self, 'University of Illinois Urbana-Champaign',
                          'https://go.illinois.edu/COVIDTestingData')
 
     async def go(self):

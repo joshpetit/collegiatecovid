@@ -242,3 +242,6 @@ dmypy.json
 cython_debug/
 
 backend/*.json
+
+.DS_Store
+

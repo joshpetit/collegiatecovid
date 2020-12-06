@@ -7,10 +7,10 @@ export function getCollegesNames() {
   ref.onSnapshot( (q) => {
       q.forEach( (doc) => {
         doc.data()['Colleges'].forEach( (x) => {
-          names.push(x['name'])
+          names.push({'name': x['name']})
         })
     });
-  })
+  }) 
   return names;
 }
 
@@ -19,11 +19,8 @@ export function getCollegeStats(name) {
   let data = {}
   ref.then( (x) => {
     let obj = x.data()
-    data['isolation'] = obj['isolation']
-    data['pos_cases'] = obj['pos_cases']
-    data['pos_rate'] = obj['pos_rate']
-    data['total_tests'] = obj['total_tests']
-  })
+    return x.data()
+  }).catch( (e) => console.log(e))
   return data
 }
 

@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 firebase-admin = "*"
 bs4 = "*"
+"html.parser" = "*"
+pyppeteer = "*"
 
 [dev-packages]
 

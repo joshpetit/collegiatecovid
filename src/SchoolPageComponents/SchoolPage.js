@@ -9,7 +9,6 @@ import StatisticSection from "./StatisticSection";
 
 function SchoolPage(props) {
     let data = new SchoolData(props.name);
-
     return (
         <div id="school-page">
             <Header school={data}/>

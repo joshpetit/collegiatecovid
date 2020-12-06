@@ -9,13 +9,11 @@ export default class SchoolData {
     constructor(state) {
             //TODO:change this to be dynamic for each school?
         const imgUrl = "./duke.png"
-
-        console.log(state.name);
         const stats = getCollegeStats(state.name);
-        console.log(stats);
 
         const schoolPolicy = getCollegePolicies(state.name);
         console.log(schoolPolicy)
+        console.log(schoolPolicy[0])
 
         //initialization of data
         this.name = state.name;

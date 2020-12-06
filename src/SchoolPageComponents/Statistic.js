@@ -2,6 +2,7 @@ import React from "react";
 import "./SchoolPage.css"
 
 function Statistic(props) {
+    console.log(props)
     return (
         <div id = "statistic">
             <p>{props.statistic.name}</p>

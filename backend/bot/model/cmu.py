@@ -14,7 +14,7 @@ class CMU(College):
                          , 'Pittsburgh, Pennsylvania')
     def query_site(self):
         return {
-            'pos_cases': self.pos_cases
+            'pos_cases': self.pos_cases,
             'pos_rate': self.pos_rate
         }
 
@@ -48,7 +48,7 @@ class CMU(College):
     def get_number_tests(self):
         pass
 
-college = CMU()
-res = college.query_site()
-print(res)
+# college = CMU()
+# res = college.query_site()
+# print(res)
 

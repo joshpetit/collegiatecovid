@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import React from "react";
+import Header from "./SchoolPageComponents/Header";
 
 function App() {
   return (

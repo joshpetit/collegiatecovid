@@ -1,0 +1,109 @@
+/**
+not sure exactly how css works in react, but some notes that may
+prove useful.
+general: recall html elements can have multiple css classes
+
+
+
+:root {
+    --variable: definition;
+    --dark: colorhexcode;
+}
+
+
+
+body {
+    font-family: "import from google fonts", sans-serif;
+    color: var(--dark);
+    background-color:(--light);
+}
+
+#id_of_element_to_be_styled {
+    background-image: url(url);
+    background-attachment: fixed;
+    background-size: cover;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+
+    height: 90vh; /**vh is viewport, this means it does 90% of the
+    screen basically
+}
+
+h1 { this is for the website title basically
+ font-family:
+ font-size:
+ padding: 40px, prevents collisions with edge of screen
+
+}
+
+a { use for styling links
+    color: var(--links);
+    text-decoration: none;
+    font-weight: controls boldness
+    padding: separation between links
+    display: inline-block;
+}
+
+nav div { this would style the divs inside a nav
+    display:inline-block;
+    float:right;
+    margin-right: 100px; margin means it won't run off the sides of the page
+}
+
+nav {
+ position: sticky;
+ top: 0; //this fixes the navbar so it
+ background-color: use variable
+    overflow: hidden;
+    box-shadow: makes it look a bit better
+}
+
+.coloredGround {
+    background-color:
+    color:
+
+}
+
+
+#about, #work, footer {
+
+}
+
+img {
+    width:100#; constrains images to the size of the website
+    mad-width: to fix it to a smaller size
+    border-radius: makes circular
+    box-shadow:  gives a shadow which makes it pop more
+    float: left;
+    margin-right: 40px;
+    margin-bottom: 40px;
+
+}
+
+.className{
+    this creates  a css class which gets applied to all elements which
+    use this css class
+}
+
+.icons {
+    display:grid
+    grid-template-columns: repeat(3,1fr);
+    column-gap:
+    padding:
+    align-item: center
+    justify-items: center;
+}
+
+
+#id {
+    position:relative; so that things can be on top of eachother
+    position:absolute; so that it doesn't move at all
+}
+
+
+
+
+
+
+/**/

@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Link, Route, Switch, Redirect} from "react-rout
 import SearchBarz from "./SearchBarz";
 import SchoolPage from "../SchoolPageComponents/SchoolPage";
 import HomePage from "../HomePage";
+import '../data/db'
 
 class NavBar extends React.Component{
     constructor() {

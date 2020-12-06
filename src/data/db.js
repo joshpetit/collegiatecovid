@@ -4,9 +4,9 @@ import {firebaseConfig} from './secret.js';
 
 firebase.initializeApp(firebaseConfig)
 let items = [];
-const ref = firebase.firestore().collection('colleges')
 
 export function getCollegesNames() {
+  let ref = firebase.firestore().collection('colleges')
   let names = []
   ref.onSnapshot( (q) => {
       q.forEach( (doc) => {

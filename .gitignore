@@ -243,4 +243,8 @@ cython_debug/
 
 .DS_Store
 
-
+backend/*.json
+package-lock.json
+src/data/secret.js
+secret.js
+.eslintcache

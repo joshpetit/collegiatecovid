@@ -1,4 +1,6 @@
 import requests
+import asyncio
+from pyppeteer import launch
 from bs4 import BeautifulSoup
 
 class College:
@@ -26,7 +28,7 @@ class College:
 class Duke(College):
     def __init__(self):
         College.__init__(self, 'Duke', 'https://coronavirus.duke.edu/covid-testing/', 'Durham, North Carolina')
-        self.totalTable = self.page .findAll("figure",
+        self.totalTable = self.page.findAll("figure",
                                      {"class": "wp-block-table cumulative"})[2].tbody
 
     def querySite(self):
@@ -36,6 +38,7 @@ class Duke(College):
         res['total_tests'] = numTests
         posCases = self.getPosCases()
         res['total_pos_cases'] = posCases
+        return res
 
     def getNumberTests(self):
         data = self.totalTable.tr.td.nextSibling
@@ -57,6 +60,7 @@ class UIUC(College):
 
     def querySite(self):
         print(self.page)
+        print(self.page.findAll("text", {"class": "single-result"}))
 
     def getNumberTests(self):
         pass

@@ -1,8 +1,10 @@
 import requests
+import tracemalloc
 import asyncio
+import re
 from pyppeteer import launch
 from bs4 import BeautifulSoup
-
+tracemalloc.start()
 class College:
 
     def __init__(self, name: str, site: str, location: str):
@@ -31,6 +33,7 @@ class Duke(College):
         self.totalTable = self.page.findAll("figure",
                                      {"class": "wp-block-table cumulative"})[2].tbody
 
+
     def querySite(self):
         res = {}
         self.page = self.getPage(self.site)
@@ -55,12 +58,31 @@ class Duke(College):
 class UIUC(College):
     def __init__(self):
         College.__init__(self, 'University of Illinois at Urbana Champaign',
-                         'https://splunk-public.machinedata.illinois.edu/en-US/app/uofi_shield_public_APP/home',
+                         'https://go.illinois.edu/COVIDTestingData',
                          'Urbana-Champaign, Illinois')
 
+    async def go(self):
+        browser = await launch()
+        page = await browser.newPage()
+        await page.goto(self.site, waitUntil='networkidle2')
+        self.page = page
+        # await page.screenshot({'path': 'example.png'})
+        content = await page.evaluate('document.body.textContent', force_expr=True)
+        print(content)
+        testsData = re.findall("\\d*,\\d*", content)[1]
+        testNum = int(testsData.replace(',',''))
+        self.testNum = testNum
+        return testsNum
+        await browser.close()
+
     def querySite(self):
-        print(self.page)
-        print(self.page.findAll("text", {"class": "single-result"}))
+        pass
+
+    def getPage(self, site: str):
+        asyncio.get_event_loop().run_until_complete(self.go())
+
+    def getNumberTests(self):
+        return self.testNum
 
     def getNumberTests(self):
         pass

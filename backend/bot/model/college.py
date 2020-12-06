@@ -148,7 +148,7 @@ class CMU(College):
     async def go(self):
         browser = await launch()
         page = await browser.newPage()
-        await page.goto(self.site, waituntil='networkidle0')
+        await page.goto(self.site)
         self.page = page
         element = await page.querySelector('.total-on-campus')
         toc = await page.evaluate('(e) => e.textContent', element)
@@ -209,6 +209,6 @@ class UNL(College):
     def get_number_tests(self):
         pass
 
-college = UNL()
+college = CMU()
 res = college.query_site()
 print(res)

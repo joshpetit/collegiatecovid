@@ -7,10 +7,10 @@ export function getCollegesNames() {
   ref.onSnapshot( (q) => {
       q.forEach( (doc) => {
         doc.data()['Colleges'].forEach( (x) => {
-          names.push(x['name'])
+          names.push({'name': x['name']})
         })
     });
-  })
+  }) 
   return names;
 }
 

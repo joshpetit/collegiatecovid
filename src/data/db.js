@@ -39,5 +39,3 @@ export function getCollegePolicies(name) {
   })
   return data
 }
-
-console.log(getCollegePolicies("Duke University"))

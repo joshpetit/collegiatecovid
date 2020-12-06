@@ -245,4 +245,6 @@ cython_debug/
 
 backend/*.json
 package-lock.json
-./src/data/secret.js
+src/data/secret.js
+secret.js
+.eslintcache

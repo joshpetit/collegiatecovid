@@ -9,8 +9,8 @@ class Yale(College):
 
     def query_site(self):
         res = {}
-        pos_cases = self.get_pos_cases()
-        res['pos_cases'] = pos_cases
+        res['pos_cases'] = self.get_pos_cases()
+        res['pos_rate'] = self.get_pos_rate()
         return res
 
     def get_pos_cases(self):
@@ -18,6 +18,10 @@ class Yale(College):
         pos_cases = table[0].text
         return int(pos_cases.replace(',',''))
 
+    def get_pos_rate(self):
+        table = self.page.select('td')
+        pos_rate = table[19].text
+        return float(pos_rate[0:-1])
 
 college = Yale()
 print(college.query_site())

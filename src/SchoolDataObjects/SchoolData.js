@@ -1,41 +1,32 @@
 //Code to read Json from a file take from:
 //https://medium.com/@osiolabs/read-write-json-files-with-node-js-92d03cc82824#:~:text=Reading%20a%20JSON%20file,data%20into%20a%20JavaScript%20object.
 
-import SchoolPolicies from "../data/schoolPolicies"
+import {getCollegeStats} from "../data/db";
+import {getCollegePolicies} from "../data/db";
+
 
 export default class SchoolData {
-    constructor(name) {
-        //need a way or a place to get data from
-        /**
-        const schoolPolicies = new SchoolPolicies();
-        const schoolDataObj = JSON.parse(schoolPolicies.schoolPolicies)
-        const  = this.getNamedUniversity(schoolDataObj,name)
-         */
+    constructor(state) {
+            //TODO:change this to be dynamic for each school?
+        const imgUrl = "./duke.jp"
 
-        //mock data
-        const imgUrl = "./duke.png"
+        console.log(state.name);
+        const stats = getCollegeStats(state.name);
+        console.log(stats);
 
-        const schoolPolicy = {name:"Duke University", frequency:"1 per week", people: "everyone tested",
-        classes:"blended", checkin:"everyday"}
-
-        const data =
-            {name: "Duke University",
-            cases: 12000000,
-            tests: 23,
-            positivity: 6.23,
-            isolation: 28
-        }
+        const schoolPolicy = getCollegePolicies(state.name);
+        console.log(schoolPolicy)
 
         //initialization of data
-        this.name = schoolPolicy.name;
+        this.name = state.name;
         this.frequency = schoolPolicy.frequency;
         this.people = schoolPolicy.people;
         this.classes = schoolPolicy.classes;
         this.checkin = schoolPolicy.checkin;
-        this.cases = data.cases;
-        this.tests = data.tests;
-        this.positivity = data.positivity;
-        this.isolation = data.isolation;
+        this.cases = stats.pos_cases;
+        this.tests = stats.total_tests;
+        this.positivity = stats.pos_rate;
+        this.isolation = stats.isolation;
         this.imgUrl = imgUrl;
     }
 

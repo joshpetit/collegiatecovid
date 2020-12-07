@@ -11,11 +11,14 @@ import SchoolPage from "../SchoolPageComponents/SchoolPage";
 import HomePage from "../HomePage";
 import "../data/db";
 import "./NavBar.css";
+import firebase from '../data/secret'
 
 class NavBar extends React.Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      colleges: []
+    };
     this.callBack = this.callBack.bind(this);
   }
 
@@ -23,13 +26,25 @@ class NavBar extends React.Component {
     this.setState({ name: props });
   };
 
+  componentDidMount() {
+  let ref = firebase.firestore().collection('colleges')
+  ref.onSnapshot( (q) => {
+      q.forEach( (doc) => {
+        doc.data()['Colleges'].forEach( (x) => {
+          this.state.colleges.push({'name': x['name']})
+          console.log(this.state.colleges)
+        })
+    });
+  }) 
+  }
+
   render() {
     return (
       <div>
         <nav>
           <div className="Navs">
             <div style={{ marginTop: 10, width: 500 }}>
-              <SearchBarz callBack={this.callBack} />
+              <SearchBarz callBack={this.callBack} schools={this.state.colleges} />
             </div>
           </div>
         </nav>

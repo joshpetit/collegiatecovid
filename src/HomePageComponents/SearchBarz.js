@@ -2,30 +2,21 @@ import React from 'react';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import { getCollegesNames } from '../data/db'
-const schools = getCollegesNames()
 
 export default function SearchBarz(prop) {
-
-    const [value, setValue] = React.useState('');
-    const [inputValue, setInputValue] = React.useState('');
 
     return(
         <div>
             <Autocomplete
-                value={value}
-                onChange={(event, newValue) => {
+                onSelect={(newValue) => {
                     if(newValue!==null) {
-                        setValue(newValue.name)
-                        prop.callBack(newValue.name)
+                        prop.callBack(newValue.target.value)
+                        console.log(newValue.target.value)
                     }
                 }}
 
-                inputValue={inputValue}
-                onInputChange={(event, newInputValue) => {
-                    setInputValue(newInputValue);
-                }}
                 id="controllable-search"
-                options={schools}
+                options={prop.school}
                 getOptionLabel={(option) => option.name}
                 style={{ width: 400 }}
                 renderInput={(params) => <TextField {...params} label="Search for your School" variant="outlined" />}

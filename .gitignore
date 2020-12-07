@@ -289,3 +289,5 @@ dist
 .DS_STORE
 .github
 *.iml
+
+secret.js

@@ -66,7 +66,7 @@ class NavBar extends React.Component {
       <div>
         <nav>
           <div className="Navs">
-            <div style={{ marginTop: 10, width: 500 }}>
+            <div style={{ margin: '0 auto', marginTop: 10, width: 500 }}>
               <SearchBarz callBack={this.callBack} schools={this.state.colleges} />
             </div>
           </div>

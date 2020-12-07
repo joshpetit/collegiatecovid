@@ -3,11 +3,11 @@ import "./SchoolPage.css";
 
 function Header(props) {
     const imageStyle = {
-        backgroundImage: "url(duke.png)",
+        backgroundImage: "url("+props.name.replaceAll(' ', '')+".jpg)",
         backgroundRepeat: "no-repeat",
         backgroundAttachment: "fixed",
         backgroundSize: "cover",
-        height: "80vh"
+        height: "30vh"
     };
 
     return (

@@ -1,6 +1,4 @@
 import React from "react";
-import SchoolData from "../SchoolDataObjects/SchoolData";
-
 import "./SchoolPage.css";
 import Header from "./Header";
 import PolicySection from "./PolicySection";
@@ -12,8 +10,8 @@ function SchoolPage(props) {
     return (
         <div id="school-page">
             <Header name={props.name}/>
-            <PolicySection policies={props.policies}/>
             <StatisticSection name={props.name} stats={props.stats}/>
+            <PolicySection policies={props.policies}/>
         </div>
     )
 }

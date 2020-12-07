@@ -10,10 +10,10 @@ function PolicySection(props) {
         <div id = "policy-section">
             <h2>Coronavirus Mitigation Policies</h2>
             <ul>
-                <li style = {bulletStyle}>{"Mandatory Testing: "+ props.policies.frequency}</li>
-                <li style = {bulletStyle}>{"People being tested: " + props.policies.people}</li>
-                <li style = {bulletStyle}>{"Type of classes: " + props.policies.classes}</li>
-                <li style = {bulletStyle}>{"Requires Symptom Check-in: " + props.policies.checkin}</li>
+                <li style = {bulletStyle}>{"Mandatory Testing: "}<b>{props.policies.frequency}</b></li>
+                <li style = {bulletStyle}>{"People being tested: " }<b>{props.policies.people}</b></li>
+                <li style = {bulletStyle}>{"Type of classes: " }<b>{props.policies.classes}</b></li>
+                <li style = {bulletStyle}>{"Requires Symptom Check-in: " }<b>{props.policies.checkin}</b></li>
             </ul>
         </div>
     )

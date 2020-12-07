@@ -26,6 +26,10 @@ h2 {
     text-align: center;
 }
 
+p {
+    font-weight: bold
+}
+
 
 ul {
     width: 40%;

@@ -4,19 +4,17 @@ import Autocomplete from '@material-ui/lab/Autocomplete';
 import { getCollegesNames } from '../data/db'
 
 export default function SearchBarz(prop) {
-
     return(
         <div>
             <Autocomplete
-                onSelect={(newValue) => {
+                onChange={(newValue) => {
                     if(newValue!==null) {
                         prop.callBack(newValue.target.value)
                         console.log(newValue.target.value)
                     }
                 }}
-
                 id="controllable-search"
-                options={prop.school}
+                options={prop.schools}
                 getOptionLabel={(option) => option.name}
                 style={{ width: 400 }}
                 renderInput={(params) => <TextField {...params} label="Search for your School" variant="outlined" />}

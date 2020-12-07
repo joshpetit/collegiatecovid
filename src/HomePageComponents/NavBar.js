@@ -31,8 +31,12 @@ class NavBar extends React.Component {
   ref.onSnapshot( (q) => {
       q.forEach( (doc) => {
         doc.data()['Colleges'].forEach( (x) => {
-          this.state.colleges.push({'name': x['name']})
-          console.log(this.state.colleges)
+          this.setState({
+            colleges:[
+              ...this.state.colleges,
+              {'name': x['name']}
+            ]
+            })
         })
     });
   }) 

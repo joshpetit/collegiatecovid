@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 
 class Amherst(College):
     def __init__(self):
-        College.__init__(self, 'Skidmore University',
+        College.__init__(self, 'Amherst College',
                          'https://www.amherst.edu/news/covid-19/dashboard/accessible')
 
 

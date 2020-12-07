@@ -78,10 +78,13 @@ class NavBar extends React.Component {
                   <Redirect to={this.state.redirect} />
               }
           <Switch>
+            {
+              this.state.redirect &&
             <Route path="/school">
               <SchoolPage name={this.state.name}
               policies={this.state.policies} stats={this.state.stats}/>
             </Route>
+            }
             <Route path="/about">
               <AboutPage />
             </Route>

@@ -33,9 +33,7 @@ class NavBar extends React.Component {
     });
   firebase.firestore().collection('college_policies').doc(props).get().then( (x) => {
     this.setState({
-      school: {
         policies: x.data(),
-      }
     })
   })
 
@@ -43,7 +41,6 @@ class NavBar extends React.Component {
     this.setState({
         stats: x.data()
     })
-    console.log(this.state.school.stats)
   })
 
   };

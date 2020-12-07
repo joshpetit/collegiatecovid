@@ -3,7 +3,7 @@ import "./SchoolPage.css";
 
 function Header(props) {
     const imageStyle = {
-        backgroundImage: "url("+props.school.imgUrl+")",
+        backgroundImage: "url(duke.png)",
         backgroundRepeat: "no-repeat",
         backgroundAttachment: "fixed",
         backgroundSize: "cover",
@@ -12,7 +12,7 @@ function Header(props) {
 
     return (
         <div style={imageStyle}>
-            <h1 className="school-page-header">{props.school.name} Covid Tracker</h1>
+            <h1 className="school-page-header">{props.name} Covid Tracker</h1>
         </div>
     )
 }

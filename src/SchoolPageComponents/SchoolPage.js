@@ -8,12 +8,12 @@ import StatisticSection from "./StatisticSection";
 
 
 function SchoolPage(props) {
-    let data = new SchoolData(props.name);
+    console.log(props.stats)
     return (
         <div id="school-page">
-            <Header school={data}/>
-            <PolicySection school={data}/>
-            <StatisticSection school={data}/>
+            <Header name={props.name}/>
+            <PolicySection policies={props.policies}/>
+            <StatisticSection name={props.name} stats={props.stats}/>
         </div>
     )
 }

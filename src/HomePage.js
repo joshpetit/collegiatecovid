@@ -11,7 +11,7 @@ export default function HomePage(){
                         <div className="Splash-head">
                             This is your Universal Covid-Tracker
                         </div>
-                        <p className="splash-subhead" style={{color: 'white' }}>
+                        <div className="splash-subhead" style={{color: 'white' }}>
                             <div style={{color: 'white' }}>
                                 Easily find SARS-CoV-2 data from universities across the US
                             </div>
@@ -21,7 +21,7 @@ export default function HomePage(){
                             <div>
                                 Compare different university responses
                             </div>
-                        </p>
+                        </div>
                     </div>
                 </div>
 

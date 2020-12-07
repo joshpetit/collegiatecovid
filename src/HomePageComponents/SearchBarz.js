@@ -27,7 +27,7 @@ export default function SearchBarz(prop) {
                 id="controllable-search"
                 options={schools}
                 getOptionLabel={(option) => option.name}
-                style={{ width: 300 }}
+                style={{ width: 400 }}
                 renderInput={(params) => <TextField {...params} label="Search for your School" variant="outlined" />}
             />
         </div>

@@ -17,7 +17,11 @@ class NavBar extends React.Component {
   constructor() {
     super();
     this.state = {
-      colleges: []
+      colleges: [],
+        policies: {
+        },
+        stats:{
+        }
     };
     this.callBack = this.callBack.bind(this);
   }
@@ -27,6 +31,21 @@ class NavBar extends React.Component {
       name: props,
       redirect: 'school'
     });
+  firebase.firestore().collection('college_policies').doc(props).get().then( (x) => {
+    this.setState({
+      school: {
+        policies: x.data(),
+      }
+    })
+  })
+
+  firebase.firestore().collection('colleges_stats').doc(props).get().then( (x) => {
+    this.setState({
+        stats: x.data()
+    })
+    console.log(this.state.school.stats)
+  })
+
   };
 
   componentDidMount() {
@@ -63,7 +82,8 @@ class NavBar extends React.Component {
               }
           <Switch>
             <Route path="/school">
-              <SchoolPage name={this.state.name} />
+              <SchoolPage name={this.state.name}
+              policies={this.state.policies} stats={this.state.stats}/>
             </Route>
             <Route path="/about">
               <AboutPage />

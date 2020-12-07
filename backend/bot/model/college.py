@@ -1,10 +1,5 @@
 import requests
-import tracemalloc
-import asyncio
-import re
-from pyppeteer import launch
 from bs4 import BeautifulSoup
-tracemalloc.start()
 class College:
 
     def __init__(self, name: str, site: str):

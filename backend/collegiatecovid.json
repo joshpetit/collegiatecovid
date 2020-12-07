@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "collegiatecovid",
+  "private_key_id": "949270ce4fca37526263ec075524017e619b9eb0",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCRkRX/CQp1egzW\nkNAWIKkmX2eLo46zj+wxTu4i0xtylRmPlRA5a1GEmqgNYDMg2urEGa7J/lS+G8kK\n0iq9qqCvSfOzhww7ho10KHgdLUnh2uJjbICTKXvDNyjGla35iIov5DiEf+O8n/gE\nywerZKc0fmH6574fdGgUBtJglCe3kkD4S5vPWekpLWkP7wizxBF5Q7EkqZKp4Voj\norU/aoYVCp/nzmvhUpCHbRMgXseI16In4Dhp6/yPwVwA55UVdW/yjq54JKVXmrCH\nNdcoqQViFFAjX0lOuAPZ5dZotkWyBKJLUUUYtodRffgU8BFsUHSXIAoJoRvuaJ7+\nmNdl4Am5AgMBAAECggEAA+n24ZE6ieNW2EeTQr8M0UJwMCvdBMS2RPKiekb7FlL+\nOZM4WRTiv5ohcd+f7E6akJyAq792A5kPaCYzvj8J3EC0p+N2D50r7T8/0IgE1Cjs\nnKAAmoRbZqmzY9iHMZ4LWiOMpfpi0xHpiyZy3bfCe6m4xHRp8yJQAJbY3f4pzbib\neYR3OrmZNn5X4I05iFVJYgEnOQ0NslB4+MM/F160At61d7+DY7xeVc6qKHME2tWs\nzbm33HC+tckKTgbJX3FCFHhQYf/+Fvr4rxa1oC/MjqvBUlGoFpC3rYhRlup6CVcF\n5JVc6R/EIwbQ0PTFt3TVVhnX1eFMulKTAscxrKeOMQKBgQDISeGaPjc5rwoOSgH/\nyGGTyJMQntELWcicZV0n2MlVFJgyyLOnu00MqxBBBLtx3D+rlX9OD+w+1sWdj9WI\niAJol1mstgCBKy3I5lGwT9r5wY7pUbX2ZgL0K6ens56LKRZmYOMkUf3ETdY1lp3K\nJnORJUU2fOk0U0a+zOqse+b/CQKBgQC6DpRRsm3uUKvBEJ70BvWlQS7XceurYSRy\n9oR6u9j6SySZLwPv9+45SfUh/rOnDUEe4g+egs6Yw0es7QRDG59Mnwy2mnrcIx5g\nLurEYYFbaGXgjVjaS4shjMr5/dA9dUE6LNJoZpgJO3xYF2oiMYjf5RuTW71a6/RW\nN+8T9rSxMQKBgBEMCMGiDf1A4rA4qFbm7Tcw2SOPAOfgamy1S+p6TxiIujOIVZIv\nJO2xGZ8PEg0s29Z00PMJ8+edTBCPD3Ohb+MLDrzeeMiFrk3tHILPKSocyVced0hT\ngmjZ1lk1tobNpnRsRqjuuZSds1+4RBHSl/+AlpV+qDKl692Nf2PS3+RRAoGBAIJb\nRqW6yvTHBp9dItE8sw0Wj1gZlBHeHOiDOay4QjyTO1AsNakC36C55Yrs5jgrvC2E\nG4dmhJNZdrV81piiGMlZQlIKB/yGini/RnNTEYvWqFJdFhzUAuX9vBTNNQJqTcoR\nr1XAU9NcHzGlLhJI/GpKHjjvdMroOKfTxqkJF+5xAoGBAJsTmgFKhA7oWoF8TbE7\nfVWnwBSQ1Y4e3ZcELlpX8Cvdis0JVgIhvLRBmTr/kj5F+9XLCDIUzO3+hSts8TcL\nXME5dTyoHp4E/NRHseHZG1BdhL1gXn5zO+4+ID5xnepObJGX0RA+c3zEkhBZ0mma\nmWaU4NozPol+9kyMI2AotSq4\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-t3tof@collegiatecovid.iam.gserviceaccount.com",
+  "client_id": "107514595926626787139",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-t3tof%40collegiatecovid.iam.gserviceaccount.com"
+}

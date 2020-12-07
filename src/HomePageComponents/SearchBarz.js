@@ -4,7 +4,6 @@ import Autocomplete from '@material-ui/lab/Autocomplete';
 
 export default function SearchBarz(prop) {
     return(
-        <div>
             <Autocomplete
                 onChange={(e, newValue) => {
                     if(newValue!==null) {
@@ -15,10 +14,8 @@ export default function SearchBarz(prop) {
                 id="controllable-search"
                 options={prop.schools}
                 getOptionLabel={(option) => option.name}
-                style={{ width: 400 }}
                 renderInput={(params) => <TextField {...params} label="Search for your School" variant="outlined" />}
             />
-        </div>
     )
 
 }

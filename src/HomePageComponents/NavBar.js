@@ -9,7 +9,6 @@ import {
 import SearchBarz from "./SearchBarz";
 import SchoolPage from "../SchoolPageComponents/SchoolPage";
 import HomePage from "../HomePage";
-import "../data/db";
 import "./NavBar.css";
 import firebase from '../data/secret'
 

@@ -6,7 +6,6 @@ import StatisticSection from "./StatisticSection";
 
 
 function SchoolPage(props) {
-    console.log(props.stats)
     return (
         <div id="school-page">
             <Header name={props.name}/>

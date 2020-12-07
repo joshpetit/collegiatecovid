@@ -23,7 +23,10 @@ class NavBar extends React.Component {
   }
 
   callBack = (props) => {
-    this.setState({ name: props });
+    this.setState({
+      name: props,
+      redirect: 'school'
+    });
   };
 
   componentDidMount() {
@@ -54,9 +57,13 @@ class NavBar extends React.Component {
         </nav>
 
         <Router>
+              {
+                this.state.redirect &&
+                  <Redirect to={this.state.redirect} />
+              }
           <Switch>
             <Route path="/school">
-              <SchoolPage name={this.state} />
+              <SchoolPage name={this.state.name} />
             </Route>
             <Route path="/about">
               <AboutPage />

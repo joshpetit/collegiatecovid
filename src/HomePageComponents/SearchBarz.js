@@ -7,10 +7,10 @@ export default function SearchBarz(prop) {
     return(
         <div>
             <Autocomplete
-                onChange={(newValue) => {
+                onChange={(e, newValue) => {
                     if(newValue!==null) {
-                        prop.callBack(newValue.target.value)
-                        console.log(newValue.target.value)
+                        prop.callBack(newValue.name)
+                        console.log(newValue.name)
                     }
                 }}
                 id="controllable-search"

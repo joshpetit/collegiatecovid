@@ -8,3 +8,4 @@ from .yale import Yale
 from .skidmore import Skidmore
 from .gvsu import GVSU
 from .amherst import Amherst
+from .wcu import WCU

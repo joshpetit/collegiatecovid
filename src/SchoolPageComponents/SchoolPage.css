@@ -4,7 +4,7 @@
   --off-white: #e0eefe;
 }
 
-h1 {
+h1.page-header {
   background-color: var(--light-blue);
   position: sticky;
   top: 0;
@@ -17,7 +17,20 @@ h1 {
   align-items: center;
   justify-content: center;
   font-size: calc(15px + 2vmin);
-  color: white;
+}
+
+h1.header {
+  background-color: var(--light-blue);
+  top: 0;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  margin-top: 0;
+  background-clip: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(15px + 2vmin);
 }
 
 h2 {

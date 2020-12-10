@@ -42,7 +42,7 @@ export default function HomePage() {
       justify="center"
     >
       <Grid item xs={10}>
-        <Typography component="h1" variant="h3" align="center">
+        <Typography className="header" component="h1" variant="h3" align="center">
           Collegiate Covid
         </Typography>
         <Card raised={true} style={cardStyle}>

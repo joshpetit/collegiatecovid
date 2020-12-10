@@ -22,7 +22,7 @@ function SchoolPage(props) {
     },
     {
       title: "7 Day Positivity Rate",
-      stat: props.stats.pos_rate,
+      stat: props.stats.pos_rate + '%',
     },
     {
       title: "Total in Isolation",
@@ -35,20 +35,21 @@ function SchoolPage(props) {
         component="h1"
         align="center"
         variant="h4"
-        className="school-page-header"
+        className="page-header"
       >
         <b>{props.name} Covid Tracker</b>
       </Typography>
 
-      <h2>{props.name + " by the numbers"}</h2>
+      <Typography> 
+      </Typography> 
       <Grid container align="center" justify="center">
         {stats.map((x, key) => (
-          <Grid item xs={6} spacing={10}>
+          <Grid item xs={12} m={6} l={6} xl={6} spacing={10}>
             <Box mr={5} ml={5} mt={3}>
               <Card style={cardStyle} raised={true}>
-                <CardHeader title={x.title} component="h1" />
+                <CardHeader className='header' title={x.title} component="h1" />
                 <CardContent>
-                  <Typography align="center" color="secondary">
+                  <Typography variant="h2" align="center" color="secondary">
                     {x.stat == null ? "Unknown" : x.stat}
                   </Typography>
                 </CardContent>
@@ -57,7 +58,6 @@ function SchoolPage(props) {
           </Grid>
         ))}
       </Grid>
-
       <PolicySection policies={props.policies} />
     </div>
   );
@@ -65,7 +65,6 @@ function SchoolPage(props) {
 
 const cardStyle = {
   height: "100%",
-  width: "40%",
 };
 
 export default SchoolPage;

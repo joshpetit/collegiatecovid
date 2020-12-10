@@ -293,3 +293,5 @@ dist
 secret.js
 collegiatecovid.json
 .firebase
+
+package-lock.json

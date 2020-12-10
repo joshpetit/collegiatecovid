@@ -36,9 +36,9 @@ export default function HomePage(){
                     <CardContent>
                         <div style={vcent}>
                             <Typography style={text} variant='subtitle2' align='center'>
-                                Easily find SARS-CoV-2 data from universities across the US
-                                Learn about SARS-CoV-2 mitigation policies
-                                Compare different university responses
+                                Easily find SARS-CoV-2 data from Universities across the US,<br/>
+                                Learn about SARS-CoV-2 Mitigation Policies,<br/>
+                                Compare Different University Responses<br/>
                             </Typography>
                         </div>
                     </CardContent>

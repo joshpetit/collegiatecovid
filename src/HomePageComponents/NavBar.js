@@ -6,6 +6,7 @@ import {
   Redirect,
 } from "react-router-dom";
 import TextField from '@material-ui/core/TextField';
+import { AppBar } from '@material-ui/core/';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import SchoolPage from "../SchoolPageComponents/SchoolPage";
 import HomePage from "../HomePage";
@@ -63,23 +64,22 @@ class NavBar extends React.Component {
   render() {
     return (
       <div>
-        <nav>
-          <div className="Navs">
-            <div style={{ margin: '0 auto', marginTop: 10, width: 500 }}>
+        <AppBar>
+            <div >
               <Autocomplete
+                style={{ margin: '0 auto', padding: 25, width: 500 }}
                 onChange={(e, newValue) => {
                     if(newValue!==null) {
                         this.callBack(newValue.name)
                     }
                 }}
-                id="controllable-search"
+                fullWidth={true}
                 options={this.state.colleges}
                 getOptionLabel={(option) => option.name}
                 renderInput={(params) => <TextField {...params} label="Search for your School" variant="outlined" />}
             />
-            </div>
           </div>
-        </nav>
+        </AppBar>
 
         <Router>
               {

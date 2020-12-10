@@ -69,7 +69,7 @@ class NavBar extends React.Component {
         >
             <div >
               <Autocomplete
-                style={{ margin: '0 auto', padding: 15, width: '80vh' }}
+                style={{ margin: '0 auto', padding: 15, width: '70%' }}
                 onChange={(e, newValue) => {
                     if(newValue!==null) {
                         this.callBack(newValue.name)

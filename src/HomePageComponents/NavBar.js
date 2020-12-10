@@ -83,7 +83,7 @@ class NavBar extends React.Component {
                 <TextField
                   {...params}
                   label="Search for your School"
-                  variant="outlined"
+                  variant="filled"
                 />
               )}
             />

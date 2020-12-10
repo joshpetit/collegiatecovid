@@ -83,8 +83,9 @@ class NavBar extends React.Component {
 
         <Router>
               {
-                this.state.redirect &&
+                this.state.redirect ?
                   <Redirect to={this.state.redirect} />
+                  : <Redirect to='/'/>
               }
           <Switch>
             {

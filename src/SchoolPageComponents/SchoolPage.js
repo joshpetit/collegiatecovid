@@ -2,7 +2,7 @@ import React from "react";
 import "./SchoolPage.css";
 import {
   Box,
-  Paralax,
+  Divider,
   List,
   ListItem,
   ListItemText,
@@ -12,7 +12,10 @@ import {
   Card,
   CardContent,
   Container,
+  Fade,
 } from "@material-ui/core/";
+
+import { Parallax } from 'react-parallax';
 
 function SchoolPage(props) {
   let stats = [
@@ -69,9 +72,11 @@ function SchoolPage(props) {
               <Card style={cardStyle} raised={true}>
                 <CardHeader className="header" title={x.title} component="h1" />
                 <CardContent>
-                  <Typography variant="h2" align="center" color="secondary">
-                    {x.stat == null ? "Unknown" : x.stat}
-                  </Typography>
+                  <Fade in={true}>
+                    <Typography variant="h2" align="center" color="secondary">
+                      {x.stat == null ? "Unknown" : x.stat}
+                    </Typography>
+                  </Fade>
                 </CardContent>
               </Card>
             </Box>
@@ -79,33 +84,39 @@ function SchoolPage(props) {
         ))}
       </Grid>
       <Container maxWidth="xl">
-        <Box style={{ marginTop: 20 }} boxShadow={4}>
+        <Box style={{ marginTop: 30}} >
           <Typography variant="h4" align="center">
             <b>{props.name} Policies</b>
           </Typography>
-          <List>
               {
                 policies.map ( (x) => (
-                  <ListItem style={{width: '95%', align: 'center'}}>
-                  <ListItemText
-                    secondary={
-                      <Typography  variant="body1">
-                        {x.title}
-                      </Typography>
-                    }
-                    primary={
-                      <Typography variant="h5">
-                        {x.policy}
-                      </Typography>
-                    }
-                  />
-            </ListItem>
+                  <Box m={4} padding={4} boxShadow={4}>
+                    <ListItemText
+                      secondary={
+                        <Typography  variant="body1">
+                        <Divider/>
+                          <b>{x.title}</b>
+                        </Typography>
+                      }
+                      primary={
+                        <Typography variant="h4">
+                          {x.policy}
+                        </Typography>
+                      }
+                    />
+                  </Box>
                 ))
 
               }
-          </List>
         </Box>
       </Container>
+      <Parallax
+        bgImage={'DukeUniversity.jpg'}
+        strength={-500}
+      >
+        <div style={{ height: '200px' }} />
+      </Parallax>
+
     </div>
   );
 }

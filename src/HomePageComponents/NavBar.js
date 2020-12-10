@@ -5,7 +5,8 @@ import {
   Switch,
   Redirect,
 } from "react-router-dom";
-import SearchBarz from "./SearchBarz";
+import TextField from '@material-ui/core/TextField';
+import Autocomplete from '@material-ui/lab/Autocomplete';
 import SchoolPage from "../SchoolPageComponents/SchoolPage";
 import HomePage from "../HomePage";
 import "./NavBar.css";
@@ -65,7 +66,17 @@ class NavBar extends React.Component {
         <nav>
           <div className="Navs">
             <div style={{ margin: '0 auto', marginTop: 10, width: 500 }}>
-              <SearchBarz callBack={this.callBack} schools={this.state.colleges} />
+              <Autocomplete
+                onChange={(e, newValue) => {
+                    if(newValue!==null) {
+                        this.callBack(newValue.name)
+                    }
+                }}
+                id="controllable-search"
+                options={this.state.colleges}
+                getOptionLabel={(option) => option.name}
+                renderInput={(params) => <TextField {...params} label="Search for your School" variant="outlined" />}
+            />
             </div>
           </div>
         </nav>

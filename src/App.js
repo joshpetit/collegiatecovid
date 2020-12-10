@@ -16,7 +16,7 @@ export const theme = createMuiTheme({
       fontSize: "2.5rem",
     },
     body1: {
-      fontSize: "2vh",
+      fontSize: "1.1rem",
     },
     button: {
       fontSize: "1.5rem",

@@ -2,6 +2,7 @@ import React from "react";
 import "./SchoolPage.css";
 import {
   Box,
+  Paralax,
   List,
   ListItem,
   ListItemText,
@@ -21,11 +22,11 @@ function SchoolPage(props) {
     },
     {
       title: "Total Tests to Date",
-      stat: props.stats.total_Tests,
+      stat: props.stats.total_tests,
     },
     {
       title: "7 Day Positivity Rate",
-      stat: props.stats.pos_rate + "%",
+      stat: props.stats.pos_rate == null ? 'Unknown': props.stats.pos_rate + "%",
     },
     {
       title: "Total in Isolation",
@@ -43,10 +44,10 @@ function SchoolPage(props) {
     },
     {
       title: "Type of Classes",
-      policy: props.policies.classes + "%",
+      policy: props.policies.classes,
     },
     {
-      title: "Symptom Checkins?",
+      title: "Symptom Check-ins",
       policy: props.policies.checkin,
     },
   ];
@@ -79,21 +80,21 @@ function SchoolPage(props) {
       </Grid>
       <Container maxWidth="xl">
         <Box style={{ marginTop: 20 }} boxShadow={4}>
-          <Typography variant="h3" align="center">
-            Mitigation Policies
+          <Typography variant="h4" align="center">
+            <b>{props.name} Policies</b>
           </Typography>
           <List>
               {
                 policies.map ( (x) => (
-            <ListItem>
+                  <ListItem style={{width: '95%', align: 'center'}}>
                   <ListItemText
                     secondary={
-                      <Typography variant="body1">
+                      <Typography  variant="body1">
                         {x.title}
                       </Typography>
                     }
                     primary={
-                      <Typography variant="h4">
+                      <Typography variant="h5">
                         {x.policy}
                       </Typography>
                     }

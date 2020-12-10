@@ -1,77 +1,76 @@
 :root {
-    --light-blue: #92A6F8;
-    --dark-blue: #092DBD;
-    --off-white: #E0EEFE;
+  --light-blue: #92a6f8;
+  --dark-blue: #092dbd;
+  --off-white: #e0eefe;
 }
 
 h1 {
-    background-color: var(--light-blue);
-    position: sticky;
-    top: 0;
-    padding-bottom: 20px;
-    padding-top: 20px;
-    margin-top: 0;
-    background-clip: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(15px + 2vmin);
-    color: white;
+  background-color: var(--light-blue);
+  position: sticky;
+  top: 0;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  margin-top: 0;
+  background-clip: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(15px + 2vmin);
+  color: white;
 }
 
 h2 {
-    text-align: center;
+  text-align: center;
 }
 
 p {
-    font-weight: bold
+  font-weight: bold;
 }
 
-
 ul {
-    width: 100%;
-    margin: auto;
-    text-align: left;
+  width: 100%;
+  margin: auto;
+  text-align: left;
 }
 
 ul li {
-    background-color: white;
-    margin: 10px;
-    border-radius: 0 0.5rem 0.5rem 0.5rem;
-    box-shadow: 0.25rem 0.25rem 0.6rem rgba(0,0,0,0.05), 0 0.5rem 1.125rem rgba(75,0,0,0.05);
-    padding: 3px;
-    list-style-position: inside;
+  background-color: white;
+  margin: 10px;
+  border-radius: 0 0.5rem 0.5rem 0.5rem;
+  box-shadow: 0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.05),
+    0 0.5rem 1.125rem rgba(75, 0, 0, 0.05);
+  padding: 3px;
+  list-style-position: inside;
 }
 
 #statistic-elements {
-    align-content: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
 }
 
 #statistic {
-    background-color: var(--off-white);
-    background-clip: border-box;
-    font-size: 2vh;
-    min-width: 20%;
-    border-radius: 15px;
-    box-shadow: 2px 2px 1px black;
-    padding-left: 5px;
-    padding-right: 5px;
-    margin: 10px;
+  background-color: var(--off-white);
+  background-clip: border-box;
+  font-size: 2vh;
+  min-width: 20%;
+  border-radius: 15px;
+  box-shadow: 2px 2px 1px black;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
 }
 
 #statistic p {
-    text-align: center;
+  text-align: center;
 }
 
 #policy-section {
-    font-size: 3vh;
-    min-height: 100%;
+  font-size: 3vh;
+  min-height: 100%;
 }
-
 
 /**
 not sure exactly how css works in react, but some notes that may

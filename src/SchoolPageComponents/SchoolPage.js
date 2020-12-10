@@ -2,9 +2,6 @@ import React from "react";
 import "./SchoolPage.css";
 import {
   Box,
-  Divider,
-  List,
-  ListItem,
   ListItemText,
   Grid,
   Typography,
@@ -15,7 +12,7 @@ import {
   Fade,
 } from "@material-ui/core/";
 
-import { Parallax } from 'react-parallax';
+import { Parallax } from "react-parallax";
 
 function SchoolPage(props) {
   let stats = [
@@ -29,7 +26,8 @@ function SchoolPage(props) {
     },
     {
       title: "7 Day Positivity Rate",
-      stat: props.stats.pos_rate == null ? 'Unknown': props.stats.pos_rate + "%",
+      stat:
+        props.stats.pos_rate == null ? "Unknown" : props.stats.pos_rate + "%",
     },
     {
       title: "Total in Isolation",
@@ -67,7 +65,7 @@ function SchoolPage(props) {
 
       <Grid container align="center" justify="center">
         {stats.map((x, key) => (
-          <Grid item xs={12} m={6} l={6} xl={6} spacing={10}>
+          <Grid key={key} item xs={12} m={6} l={6} xl={6}>
             <Box mr={5} ml={5} mt={3}>
               <Card style={cardStyle} raised={true}>
                 <CardHeader className="header" title={x.title} component="h1" />
@@ -84,39 +82,27 @@ function SchoolPage(props) {
         ))}
       </Grid>
       <Container maxWidth="xl">
-        <Box style={{ marginTop: 30}} >
+        <Box style={{ marginTop: 30 }}>
           <Typography variant="h4" align="center">
             <b>{props.name} Policies</b>
           </Typography>
-              {
-                policies.map ( (x) => (
-                  <Box m={4} padding={4} boxShadow={4}>
-                    <ListItemText
-                      secondary={
-                        <Typography  variant="body1">
-                        <Divider/>
-                          <b>{x.title}</b>
-                        </Typography>
-                      }
-                      primary={
-                        <Typography variant="h4">
-                          {x.policy}
-                        </Typography>
-                      }
-                    />
-                  </Box>
-                ))
-
-              }
+          {policies.map((x, key) => (
+            <Box key={key} m={4} padding={4} boxShadow={4}>
+              <ListItemText
+                secondary={
+                  <Typography variant="body1">
+                    <b>{x.title}</b>
+                  </Typography>
+                }
+                primary={<Typography variant="h4">{x.policy}</Typography>}
+              />
+            </Box>
+          ))}
         </Box>
       </Container>
-      <Parallax
-        bgImage={'DukeUniversity.jpg'}
-        strength={-500}
-      >
-        <div style={{ height: '200px' }} />
+      <Parallax bgImage={"DukeUniversity.jpg"} strength={-500}>
+        <div style={{ height: "200px" }} />
       </Parallax>
-
     </div>
   );
 }

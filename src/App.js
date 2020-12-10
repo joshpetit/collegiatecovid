@@ -1,6 +1,5 @@
 import React from "react";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
-import { red, grey } from "@material-ui/core/colors/";
 import NavBar from "./HomePageComponents/NavBar";
 
 export const theme = createMuiTheme({

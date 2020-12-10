@@ -1,11 +1,9 @@
 import React from "react";
 import {
   Grid,
-  Divider,
   Card,
   Typography,
   CardContent,
-  CardHeader,
 } from "@material-ui/core/";
 import "./Landing.css";
 

@@ -64,16 +64,17 @@ class NavBar extends React.Component {
   render() {
     return (
       <div>
-        <AppBar>
+        <AppBar
+          position='static'
+        >
             <div >
               <Autocomplete
-                style={{ margin: '0 auto', padding: 25, width: 500 }}
+                style={{ margin: '0 auto', padding: 15, width: '80vh' }}
                 onChange={(e, newValue) => {
                     if(newValue!==null) {
                         this.callBack(newValue.name)
                     }
                 }}
-                fullWidth={true}
                 options={this.state.colleges}
                 getOptionLabel={(option) => option.name}
                 renderInput={(params) => <TextField {...params} label="Search for your School" variant="outlined" />}

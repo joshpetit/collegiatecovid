@@ -1,4 +1,6 @@
-###Health Track Submission
+# CollegiateCovid.com
+
+### Health Track Submission
 ## Inspiration
 The coronavirus pandemic in higher education has resulted in a wide variety of complex COVID-19 dashboards. The sheer number of different displays and webpages make it hard to compare different colleges and how well they are dealing with the coronavirus. We wanted to create an application that automatically retrieves up to date policies and statistics for covid at American universities. With this data we can create a website that allows users to view the standardized data for many universities.  
 

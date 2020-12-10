@@ -30,7 +30,7 @@ p {
 
 
 ul {
-    width: 40%;
+    width: 100%;
     margin: auto;
     text-align: left;
 }
@@ -54,7 +54,8 @@ ul li {
 #statistic {
     background-color: var(--off-white);
     background-clip: border-box;
-    max-width: 300px;
+    font-size: 2vh;
+    min-width: 20%;
     border-radius: 15px;
     box-shadow: 2px 2px 1px black;
     padding-left: 5px;
@@ -67,6 +68,8 @@ ul li {
 }
 
 #policy-section {
+    font-size: 3vh;
+    min-height: 100%;
 }
 
 
